@@ -9,12 +9,12 @@
 .reference{
     position:absolute;
     margin: auto;
-    left: -45px;
+    left: -25px;
     right: 0; 
     top: 0; 
     bottom: 0;
     height: 460px;
-    width: auto
+    width: auto;
 }
 
 .flag{
@@ -32,34 +32,96 @@
 
 .leaf-center{
     width: 110px;
-    height: 200px;
+    height: 210px;
     position: absolute;
     left: 0;
     right:0;
-    margin: auto;
     top: 0;
-    perspective: 60px;
-}
-
-.leaf-perspective {
-    width: 83px;
-    height: 100%;
-    position: absolute;
-    left: 15px;    
-    bottom: -30px;
-    transform-style: preserve-3d;
-    transform: rotateX(-10deg);
-    background-color: red;
+    margin: auto;
 }
 
 .leaf-left{
-    width: 110px;
-    height: 200px;
+    width: 90px;
+    height: 160px;
+    position: absolute;
+    left: 25px;
+    top: 63px;
+    transform: rotate(-43deg);
+}
+
+.leaf-right{
+    width: 90px;
+    height: 160px;
+    position: absolute;
+    right: 25px;
+    top: 63px;
+    transform: rotate(43deg);
+}
+
+.lside{
+    background-color: red;
+    width: 37px;
+    height: 75%;
+    position: absolute;
+    left: 14px;
+    margin: auto;
+    bottom: 0;
+    transform: skewX(8deg);
+}
+
+.cside{
+    background-color: red;
+    width: 37px;
+    height: 75%;
     position: absolute;
     left: 0;
-    right:0;
+    right: 0;
     margin: auto;
-    top: 0;
-    perspective: 60px;
-    transform: rotateX(45deg);
+    bottom: 0;
+}
+
+.rside{
+    background-color: red;
+    width: 37px;
+    height: 75%;
+    position: absolute;
+    right: 14px;
+    margin: auto;
+    bottom: 0;
+    transform: skewX(-8deg);
+}
+
+.bottom-left{
+    position: absolute;
+    bottom: 65px;
+    left: -40px;
+    right: 0;
+    margin: auto;
+    width: 80px;
+    height: 55px;
+    background-color: red;
+    transform: skewX(-40deg) rotate(-20deg);
+}
+
+.bottom-right{
+    position: absolute;
+    bottom: 65px;
+    right: -40px;
+    left: 0;
+    margin: auto;
+    width: 80px;
+    height: 55px;
+    background-color: red;
+    transform: skewX(40deg) rotate(20deg);
+}
+
+.tail{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 5px;
+    height: 100px;
+    background-color: red;
 }
