@@ -1,3 +1,10 @@
+/*
+    use grid to define the width-height for an image inside and set the image to a percentage relative to that measure
+    use box-shadow to create curve borders
+    use combination of rotate, scale and translate to create a cool hover effect
+    use container as a conditional to check a style css variable value
+*/
+
 body {
     background: rgba(39,121,198,1);
     font-family: 'Poppins';
