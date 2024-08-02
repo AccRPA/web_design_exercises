@@ -86,6 +86,7 @@ body {
     color: var(--text-color);
     background-color: #313131;
     border: 1px solid #454545;
+    cursor: pointer;
 }
 
 .card .more .buttons button:nth-child(1){
@@ -117,6 +118,7 @@ body {
     height: 15px;
     list-style: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .card::before{
@@ -147,6 +149,7 @@ body {
     font-size: large;
 }
 
+/* evaluates if the value of the style css variable --isPopular is true */
 @container style(--isPopular: true)  {
     .card::after{
         content: '🔥 Popular';
@@ -157,6 +160,7 @@ body {
     }
 }
 
+/* evaluates if the value of the style css variable --isNew is true */
 @container style(--isNew: true)  {
     .card::after{
         content: '🆕 New';
