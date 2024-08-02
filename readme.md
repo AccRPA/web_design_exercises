@@ -11,6 +11,7 @@ Here is the lists of the projects:
 - canada_flag: The Canadian flag using only css. No animation.
 - ferb: The character Ferb from Phineas and Ferb tv show.
 - sun_and_moon: A representation of a sun or a moon depending on the class applied.
+- shoe_card: this project was based on a tutorial for learning the css container.
 
 ## Installation
 Navigate to the project folder and just open the HTML file with a browser. If you are using Visual Studio Code, then open the HTML file and click on the "Show preview" button or use the extension "Live Preview".
