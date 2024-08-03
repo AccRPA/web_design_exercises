@@ -11,7 +11,6 @@ body {
     ;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 
 * {
@@ -48,22 +47,39 @@ main .container div:last-child{
 }
 
 main .container .carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main .container .carousel .grid {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(3, 1fr);
+    width: 80%;
 }
 
-main .container .carousel div {
-    font-size: 20vw;
+main .container .carousel .grid div {
+    font-size: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.5s cubic-bezier(.44,-0.27,.39,1.71);
     cursor: pointer;
+    filter: grayscale(0.5);
+    position: relative;
 }
 
-main .container .carousel div:hover {
+main .container .carousel .grid div:hover {
     transform: scale(1.5);
+    filter: grayscale(0);
+    z-index: 1;
+}
+
+main .container .carousel .grid:hover div:not(:hover){
+    filter: grayscale(1) blur(2px);
+    transform: scale(0.8);
+    z-index: 0;
 }
 
 footer {
