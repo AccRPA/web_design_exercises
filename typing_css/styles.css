@@ -1,0 +1,53 @@
+/*
+    use grid to define the width-height for an image inside and set the image to a percentage relative to that measure
+    use box-shadow to create curve borders
+    use combination of rotate, scale and translate to create a cool hover effect
+    use container as a conditional to check a style css variable value
+*/
+
+body {
+    background: rgba(39,121,198,1);
+    font-family: 'Poppins';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root{
+    --background-color: #1a1a1a;
+    --text-color: #eee;
+    --border-radius: 30px;
+}
+
+.typewriter {
+    display: flex;
+    justify-content: center;
+}
+
+.typewriter p {
+    font-family: monospace;
+    font-size: 1.5rem;
+    /* para empezar desde el centro, o desde la izquierda */
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;    
+    color: var(--text-color);
+    animation: typing 5s steps(24) forwards, blinkCursor 0.5s linear 0s infinite none;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;  
+    }
+}
