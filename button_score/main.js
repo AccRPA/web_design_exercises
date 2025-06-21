@@ -29,7 +29,7 @@ function onScoreClick(btn_score, point, operation){
                 score_new.className = "elem_score";
                 score_new.innerHTML = score;
                 elem_score_container.appendChild(score_new);
-                elem_score_container.classList.add('score_animation_up');   
+                elem_score_container.classList.add('score_animation_up'); 
             }else if (operation === 'minus' && score > 0){
                 score = score - 1;
                 score_new.className = "elem_score";
@@ -50,8 +50,13 @@ function onScoreClick(btn_score, point, operation){
                 }           
             }
             elem_score_container.classList.remove('score_animation_up');
-            elem_score_container.classList.remove('score_animation_down');
-            btn_score.removeAttribute('disabled');
+            elem_score_container.classList.remove('score_animation_down'); 
+            if(score > 0){
+                const buttons_container = document.querySelector('.buttons_container')?.children;
+                for(const btnContainer of buttons_container){
+                    btnContainer.querySelector('.btn_score').removeAttribute('disabled');
+                }
+            }
         }, 500 + 500);
     })
 }

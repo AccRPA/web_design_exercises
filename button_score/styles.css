@@ -32,11 +32,15 @@ body {
     overflow: hidden;
 }
 
-.elem_score_container{
+.elem_score_container {
     flex-direction: column;
     gap: 10px;
     overflow: hidden;
     display: flex;
+}
+
+.elem_score_container > div{
+    color: black
 }
 
 .btn_score {
@@ -44,6 +48,10 @@ body {
     margin: auto;
     z-index: 1;
     padding: 10px 10px;
+}
+
+.btn_score:disabled{
+    background-color: lightgrey;
 }
 
 .btn_container {
