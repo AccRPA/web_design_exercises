@@ -9,6 +9,7 @@ body {
 :root {
     --score-coordinate-x: 0;
     --score-coordinate-y: 0;
+    --score: 0;
 }
 .container {
     display: flex;
@@ -28,6 +29,14 @@ body {
     z-index: 1;
     position: relative;
     left: 15.5rem;
+    overflow: hidden;
+}
+
+.elem_score_container{
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    display: flex;
 }
 
 .btn_score {
@@ -52,13 +61,23 @@ body {
 }
 
 .pointToScoreAnimate {
-    animation: animate_point_1 0.3s cubic-bezier( 0.68, -0.55, 0.265, 1.55 ) forwards,
-    animate_point_2 0.8s ease-in-out 0.3s forwards,
-    animate_point_3 0.3s ease-in-out 0.8s forwards;
+    animation: animate_point_1 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards,
+    changeOpacity 1s linear 0.2s forwards;
 }
 
-.scoreAnimate {
-    animation: scale_score 0.8s cubic-bezier( 0.68, -0.55, 0.265, 1.55 ) 1s forwards;
+.score_animation_up {
+    animation: moveUpDown 0.5s ease-in-out forwards;
+}
+
+.score_animation_down {
+    animation: moveUpDown 0.5s ease-in-out reverse forwards;
+}
+
+.buttons_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 @keyframes animate_point_1 {
@@ -68,27 +87,25 @@ body {
         transform: translate(0,0);
     }
     100%{
-        inset: -100% auto auto auto;
+        inset: -100% auto auto auto;        
     }
 }
 
-@keyframes animate_point_2 {    
-    100%{
-        transform: translate(var(--score-coordinate-x), var(--score-coordinate-y));
+@keyframes changeOpacity {
+    0% {
+        opacity: 1;
     }
-}
-
-@keyframes animate_point_3 {    
-    100%{
+    100% {
         opacity: 0;
     }
 }
 
-@keyframes scale_score {    
-    50% {
-        transform: scale(1.5);
+@keyframes moveUpDown {    
+    0%{
+        
+        transform: translateY(15px);
     }
     100%{
-        transform: scale(1);
+        transform: translateY(-15px);
     }
 }
